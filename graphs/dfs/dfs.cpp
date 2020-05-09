@@ -22,7 +22,7 @@ public:
     void DFS_visit(int v, bool visited[])
     {
         visited[v] = true;
-        cout << v << " ";
+        cout << v << "\n";
 
         list<int>::iterator it;
         for (it = adj[v].begin(); it != adj[v].end(); ++it)
@@ -45,22 +45,6 @@ public:
         DFS_visit(v, visited);
     }
 };
-
-void dfs(int s, vector<int> g[], int visited[])
-{
-    if (visited[s] == true)
-    {
-        return;
-    }
-    else
-    {
-        visited[s] = true;
-        for (auto i : g[s])
-        {
-            dfs(i, g, visited);
-        }
-    }
-}
 
 int main()
 {
